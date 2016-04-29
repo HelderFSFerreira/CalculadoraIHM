@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:editable="false"
+            android:id="@id/eText1"
+            android:background="@android:color/transparent"
+            android:textColor="#5b5b5b"
+            android:textSize="60dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:editable="false"
+            android:id="@id/eText2"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:textColor="#5b5b5b"
+            android:textSize="60dp"/>
+
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8">
+
+        <TableRow>
+            <Button android:id="@id/btnLimpar"
+                    android:layout_span="2"
+                    android:text="@string/btnClean"/>
+            <Button android:id="@id/btnApagarCaractere"
+                    android:text="@string/btnBack"/>
+
+            <Button android:id="@id/btnDivisao"
+                    android:text="@string/btnDivide"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@id/btnSete"
+                    android:text="@string/btn7"/>
+
+            <Button android:id="@id/btnOito"
+                    android:text="@string/btn8"/>
+
+            <Button android:id="@id/btnNove"
+                    android:text="@string/btn9"/>
+
+            <Button android:id="@id/btnMutilicacao"
+                    android:text="@string/btnMultiplicar"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@id/btnQuatro"
+                    android:text="@string/btn4"/>
+            <Button android:id="@id/btnCinco"
+                    android:text="@string/btn5"/>
+            <Button android:id="@id/btnSeis"
+                    android:text="@string/btn6"/>
+            <Button android:id="@id/btnSubtracao"
+                    android:text="@string/btnMenos"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@id/btnUm"
+                    android:text="@string/btn1"/>
+            <Button android:id="@id/btnDois"
+                    android:text="@string/btn2"/>
+            <Button android:id="@id/btnTres"
+                    android:text="@string/btn3"/>
+            <Button android:id="@id/btnSoma"
+                    android:text="@string/btnPlus"/>
+        </TableRow>
+        <TableRow>
+            <Button android:id="@id/btnzero"
+                    android:text="@string/btn0"/>
+            <Button android:id="@id/btnPonto"
+                    android:text="@string/btnDot"/>
+            <Button android:id="@id/btnIgual"
+                    android:text="@string/btnEquals"
+                    android:layout_span="2"/>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
