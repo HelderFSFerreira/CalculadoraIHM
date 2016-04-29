@@ -17,7 +17,8 @@
             android:id="@id/eText1"
             android:background="@android:color/transparent"
             android:textColor="#5b5b5b"
-            android:textSize="60dp"/>
+            android:textStyle="bold"
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,7 +28,7 @@
             android:background="@android:color/transparent"
             android:gravity="right"
             android:textColor="#5b5b5b"
-            android:textSize="60dp"/>
+            android:textStyle="bold"/>
 
     </LinearLayout>
     <TableLayout
