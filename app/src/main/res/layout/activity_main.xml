@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,238 +7,120 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.helde.calculadoraihm.MainActivity">
+    tools:context="com.example.helde.calculadoraihm.MainActivity"
+    android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/memoriaMais"
-        android:id="@+id/btnMMais"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/eText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mMenos"
-        android:id="@+id/btnMMenos"
-        android:layout_alignBottom="@+id/btnMMais"
-        android:layout_toRightOf="@+id/btnMMais"
-        android:layout_toEndOf="@+id/btnMMais" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mClean"
-        android:id="@+id/btnMClean"
-        android:layout_alignBottom="@+id/btnMMenos"
-        android:layout_toRightOf="@+id/btnMMenos"
-        android:layout_toEndOf="@+id/btnMMenos" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mShow"
-        android:id="@+id/btnMShow"
-        android:layout_alignTop="@+id/btnMClean"
-        android:layout_toRightOf="@+id/btnMClean"
-        android:layout_toEndOf="@+id/btnMClean" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnClean"
-        android:id="@+id/btnLimpar"
-        android:layout_below="@+id/btnMMais"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@id/btnMMenos"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnBack"
-        android:id="@+id/btnApagarCaractere"
-        android:layout_alignBottom="@+id/btnLimpar"
-        android:layout_toRightOf="@+id/btnMMenos"
-        android:layout_toEndOf="@+id/btnMMenos" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnDivide"
-        android:id="@+id/btnDivisao"
-        android:layout_alignBottom="@+id/btnApagarCaractere"
-        android:layout_toRightOf="@+id/btnApagarCaractere"
-        android:layout_toEndOf="@+id/btnApagarCaractere" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn7"
-        android:id="@+id/btnSete"
-        android:layout_below="@+id/btnLimpar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn8"
-        android:id="@+id/btnOito"
-        android:layout_alignTop="@+id/btnSete"
-        android:layout_alignLeft="@+id/btnMMenos"
-        android:layout_alignStart="@+id/btnMMenos" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn9"
-        android:id="@+id/btnNove"
-        android:layout_alignBottom="@+id/btnOito"
-        android:layout_alignLeft="@+id/btnApagarCaractere"
-        android:layout_alignStart="@+id/btnApagarCaractere" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnMultiplicar"
-        android:id="@+id/btnMutilicacao"
-        android:layout_alignBottom="@+id/btnNove"
-        android:layout_toRightOf="@+id/btnNove"
-        android:layout_toEndOf="@+id/btnNove" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn4"
-        android:id="@+id/btnQuatro"
-        android:layout_below="@+id/btnSete"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn5"
-        android:id="@+id/btnCinco"
-        android:layout_alignBottom="@+id/btnQuatro"
-        android:layout_alignLeft="@+id/btnOito"
-        android:layout_alignStart="@+id/btnOito" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn6"
-        android:id="@+id/btnSeis"
-        android:layout_alignBottom="@+id/btnCinco"
-        android:layout_alignLeft="@+id/btnNove"
-        android:layout_alignStart="@+id/btnNove" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnMenos"
-        android:id="@+id/btnSubtracao"
-        android:layout_alignBottom="@+id/btnSeis"
-        android:layout_toRightOf="@+id/btnSeis"
-        android:layout_toEndOf="@+id/btnSeis" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn1"
-        android:id="@+id/btnUm"
-        android:layout_below="@+id/btnQuatro"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn2"
-        android:id="@+id/btnDois"
-        android:layout_alignBottom="@+id/btnUm"
-        android:layout_alignLeft="@+id/btnCinco"
-        android:layout_alignStart="@+id/btnCinco" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn3"
-        android:id="@+id/btnTres"
-        android:layout_alignBottom="@+id/btnDois"
-        android:layout_alignLeft="@+id/btnSeis"
-        android:layout_alignStart="@+id/btnSeis" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnPlus"
-        android:id="@+id/btnSoma"
-        android:layout_alignBottom="@+id/btnTres"
-        android:layout_toRightOf="@+id/btnTres"
-        android:layout_toEndOf="@+id/btnTres" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn0"
-        android:id="@+id/btnzero"
-        android:layout_below="@+id/btnUm"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnDot"
-        android:id="@+id/btnPonto"
-        android:layout_alignBottom="@+id/btnzero"
-        android:layout_alignLeft="@+id/btnDois"
-        android:layout_alignStart="@+id/btnDois" />
-
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnEquals"
-        android:id="@+id/btnIgual"
-        android:layout_alignBottom="@+id/btnPonto"
-        android:layout_toRightOf="@+id/btnPonto"
-        android:layout_toEndOf="@+id/btnPonto"
-        android:layout_alignRight="@id/btnSoma"
-        android:background="#4caf38" />
+        android:layout_weight="0.5
+        "
+        android:orientation="vertical">
 
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eText1"
+            android:text="@string/eText1"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:gravity="right"
+            android:textColor="#5b5b5b"
+            android:textStyle="bold"
+            android:textSize="60dp"
+            android:layout_weight="0.25"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eText2"
+            android:text="@string/eText2"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:gravity="right"
+            android:textColor="#5b5b5b"
+            android:textStyle="bold"
+            android:textSize="@dimen/activity_vertical_margin"
+            android:layout_weight="0.25"/>
+
+
+    </LinearLayout>
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/eText1"
-        android:background="@android:color/transparent"
-        android:editable="false"
-        android:text="@string/eText1"
-        android:gravity="right"
-        android:textColor="#5b5b5b"
-        android:textSize="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="bottom">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/eText2"
-        android:layout_below="@+id/eText1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/btnMShow"
-        android:layout_alignEnd="@+id/btnMShow"
-        android:background="@android:color/transparent"
-        android:text="@string/eText2"
-        android:editable="false"
-        android:gravity="right"
-        android:textColor="#5b5b5b"
-        android:textSize="60dp" />
+        <TableRow>
+            <Button android:id="@+id/btnMMais"
+                android:text="@string/memoriaMais"/>
+            <Button android:id="@+id/btnMMenos"
+                android:text="@string/mMenos"/>
+            <Button android:id="@+id/btnMShow"
+                android:text="@string/mShow"/>
+            <Button android:id="@+id/btnMClean"
+                android:text="@string/mClean"/>
+        </TableRow>
 
-</RelativeLayout>
+        <TableRow>
+            <Button android:id="@+id/btnLimpar"
+                android:layout_span="2"
+                android:text="@string/btnClean"/>
+            <Button android:id="@+id/btnApagarCaractere"
+                android:text="@string/btnBack"/>
+
+            <Button android:id="@+id/btnDivisao"
+                android:text="@string/btnDivide"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/btnSete"
+                android:text="@string/btn7"/>
+
+            <Button android:id="@+id/btnOito"
+                android:text="@string/btn8"/>
+
+            <Button android:id="@+id/btnNove"
+                android:text="@string/btn9"/>
+
+            <Button android:id="@+id/btnMutilicacao"
+                android:text="@string/btnMultiplicar"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/btnQuatro"
+                android:text="@string/btn4"/>
+            <Button android:id="@+id/btnCinco"
+                android:text="@string/btn5"/>
+            <Button android:id="@+id/btnSeis"
+                android:text="@string/btn6"/>
+            <Button android:id="@+id/btnSubtracao"
+                android:text="@string/btnMenos"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/btnUm"
+                android:text="@string/btn1"/>
+            <Button android:id="@+id/btnDois"
+                android:text="@string/btn2"/>
+            <Button android:id="@+id/btnTres"
+                android:text="@string/btn3"/>
+            <Button android:id="@+id/btnSoma"
+                android:text="@string/btnPlus"/>
+        </TableRow>
+        <TableRow>
+            <Button android:id="@+id/btnzero"
+                android:text="@string/btn0"/>
+            <Button android:id="@+id/btnPonto"
+                android:text="@string/btnDot"/>
+            <Button android:id="@+id/btnIgual"
+                android:text="@string/btnEquals"
+                android:layout_span="2"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>
