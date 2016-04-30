@@ -25,4 +25,5 @@
     <string name="btnEquals">=</string>
     <string name="eText1" />
     <string name="eText2" />
+    <string name="memoriaMais">M+</string>
 </resources>

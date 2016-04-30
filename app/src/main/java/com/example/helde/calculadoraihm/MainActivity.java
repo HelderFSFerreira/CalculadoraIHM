@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText Display1;
     private EditText Display2;
     private String strAnterior="",operacao="",strAtual="";
-    private float resultado;
-    private boolean ultimoBotaoEIgual;
+    private float resultado=0,memoriaM;
+    private boolean ultimoBotaoEIgual,memoriaLimpa=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int idList[] = {R.id.btnUm, R.id.btnDois, R.id.btnTres, R.id.btnQuatro, R.id.btnCinco, R.id.btnSeis, R.id.btnSete, R.id.btnOito, R.id.btnNove, R.id.btnzero,
                 R.id.btnDivisao, R.id.btnMutilicacao, R.id.btnSoma, R.id.btnSubtracao, R.id.btnIgual,
-                R.id.btnApagarCaractere, R.id.btnLimpar, R.id.btnPonto};
+                R.id.btnApagarCaractere, R.id.btnLimpar, R.id.btnPonto,
+                R.id.btnMMais,R.id.btnMMenos,R.id.btnMShow,R.id.btnMClean};
 
         for (int id : idList) {
             View v = (View) findViewById(id);
@@ -64,6 +66,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnPonto:
                 checkPonto();
                 break;
+            case R.id.btnMClean:
+                controlaMemoria("C");
+                break;
+            case R.id.btnMMais:
+                controlaMemoria("+");
+                break;
+            case R.id.btnMMenos:
+                controlaMemoria("-");
+                break;
+            case R.id.btnMShow:
+                controlaMemoria("M");
+                break;
+
 
 
             default:
@@ -72,6 +87,91 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         penultimobotao(view);
+    }
+
+    //Verifica o estado da memoria e controla os calculos
+
+    public void controlaMemoria(String tipo) {
+        switch (tipo) {
+            case "C":
+                if (memoriaLimpa == false) {
+                    memoriaM=0;
+                    memoriaLimpa=true;
+                    strAnterior="";
+                    strAtual="";
+                    operacao="";
+                    resultado=0;
+                    Toast.makeText(this,"Memoria apagada",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(this,"Memoria já se encontra apagada",Toast.LENGTH_LONG).show();
+                }
+
+                break;
+            case "+":
+                if (memoriaLimpa) {
+                    memoriaM=getNumeroMemoria();
+                    memoriaLimpa=false;
+                } else {
+                    float ma1,ma2; // Memorias auxiliares
+                    ma1=memoriaM;
+                    ma2=getNumeroMemoria();
+
+                    // Adicionar às Strings
+
+                    strAnterior=String.valueOf(ma1);
+                    strAtual=String.valueOf(ma2);
+                    operacao="+";
+                    mostrarConta();
+                    calculaResultado();
+                    memoriaM=resultado;
+
+
+                }
+                break;
+            case "-":
+                if (memoriaLimpa) {
+                    memoriaM=getNumeroMemoria();
+                    memoriaLimpa=false;
+                } else {
+                    float ma1,ma2; // Memorias auxiliares
+                    ma1=memoriaM;
+                    ma2=getNumeroMemoria();
+
+                    // Adicionar às Strings
+
+                    strAnterior=String.valueOf(ma1);
+                    strAtual=String.valueOf(ma2);
+                    operacao="-";
+                    mostrarConta();
+                    calculaResultado();
+                    memoriaM=resultado;
+                }
+                break;
+            case "M":
+                if (!memoriaLimpa) {
+                    Display1.setText(String.valueOf(memoriaM));
+                    strAnterior="";
+                    strAtual="";
+                    operacao="";
+                    resultado=0;
+                    Display2.setText("");
+
+                }
+
+        }
+    }
+
+    public float getNumeroMemoria() {
+        if (strAnterior.isEmpty()) {
+            if (!strAtual.isEmpty()) {
+                return Float.parseFloat(strAtual);
+            } else {
+                Toast.makeText(this,"Não há número para adicionar à memoria",Toast.LENGTH_LONG).show();
+            }
+        } else {
+            return resultado;
+        }
+        return 0;
     }
 
     //Verifica se o ultimo botão é o botão igual.
@@ -110,8 +210,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //Mostra o resultado e coloca o resultado na String anterior
+
     public void igual() {
-        if (!(strAtual.isEmpty() || strAnterior.isEmpty())) {
+        if (strAtual.isEmpty() || strAnterior.isEmpty() || operacao.isEmpty()) {
+
+        } else {
             Display1.setText(strAnterior + " " + operacao + " " + strAtual);
             calculaResultado();
             strAnterior=String.valueOf(resultado);
@@ -122,6 +226,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    // Adiciona um novo numero à string atual
+    // Verifica se o ultimo botão é o = para não dar o bug de adicionar novos numeros sem operação
+
     public void adicionaNumero(String numero) {
         if (ultimoBotaoEIgual) {
             strAnterior="";
@@ -129,6 +236,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         strAtual+=numero;
         mostrarConta();
     }
+
+    // Adiciona operações
 
     public void adicionaOperacao(String operacao) {
         switch (operacao) {
@@ -199,6 +308,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // Verifica se a string atual é vazia
+
     public boolean verificarAtualVazio() {
         mostrarConta();
         if (strAtual.isEmpty()) {
@@ -207,6 +318,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
     }
+
+    // Calcula o resultado final, e coloca no display do resultado
+    // Adiciona o resultado à strAnterior para permitir novas contas sobre o resultado
 
     public void calculaResultado() {
         float n1 = Float.parseFloat(strAnterior);
@@ -240,6 +354,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+    // Imprime para o ecra de contas a conta a realizar.
 
     public void mostrarConta() {
         Display1.setText(strAnterior + " " + operacao + " " + strAtual);

@@ -12,8 +12,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mMais"
-        android:id="@+id/button"
+        android:text="@string/memoriaMais"
+        android:id="@+id/btnMMais"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/eText2"
         android:layout_alignParentLeft="true"
@@ -23,38 +23,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mMenos"
-        android:id="@+id/button2"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:id="@+id/btnMMenos"
+        android:layout_alignBottom="@+id/btnMMais"
+        android:layout_toRightOf="@+id/btnMMais"
+        android:layout_toEndOf="@+id/btnMMais" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mClean"
-        android:id="@+id/button3"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/button2"
-        android:layout_toEndOf="@+id/button2" />
+        android:id="@+id/btnMClean"
+        android:layout_alignBottom="@+id/btnMMenos"
+        android:layout_toRightOf="@+id/btnMMenos"
+        android:layout_toEndOf="@+id/btnMMenos" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mShow"
-        android:id="@+id/button4"
-        android:layout_alignTop="@+id/button3"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3" />
+        android:id="@+id/btnMShow"
+        android:layout_alignTop="@+id/btnMClean"
+        android:layout_toRightOf="@+id/btnMClean"
+        android:layout_toEndOf="@+id/btnMClean" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnClean"
         android:id="@+id/btnLimpar"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/btnMMais"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@id/button2"/>
+        android:layout_alignRight="@id/btnMMenos"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -62,8 +62,8 @@
         android:text="@string/btnBack"
         android:id="@+id/btnApagarCaractere"
         android:layout_alignBottom="@+id/btnLimpar"
-        android:layout_toRightOf="@+id/button2"
-        android:layout_toEndOf="@+id/button2" />
+        android:layout_toRightOf="@+id/btnMMenos"
+        android:layout_toEndOf="@+id/btnMMenos" />
 
     <Button
         android:layout_width="wrap_content"
@@ -89,8 +89,8 @@
         android:text="@string/btn8"
         android:id="@+id/btnOito"
         android:layout_alignTop="@+id/btnSete"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignLeft="@+id/btnMMenos"
+        android:layout_alignStart="@+id/btnMMenos" />
 
     <Button
         android:layout_width="wrap_content"
@@ -232,8 +232,8 @@
         android:layout_below="@+id/eText1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button4"
-        android:layout_alignEnd="@+id/button4"
+        android:layout_alignRight="@+id/btnMShow"
+        android:layout_alignEnd="@+id/btnMShow"
         android:background="@android:color/transparent"
         android:text="@string/eText2"
         android:editable="false"
