@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int id : idList) {
             View v = (View) findViewById(id);
             v.setOnClickListener(this);
+            System.out.println(v);
         }
     }
 
