@@ -47,12 +47,13 @@
 
     </LinearLayout>
     <TableLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:gravity="bottom">
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent">
             <Button android:id="@+id/btnMMais"
                 android:text="@string/memoriaMais"/>
             <Button android:id="@+id/btnMMenos"

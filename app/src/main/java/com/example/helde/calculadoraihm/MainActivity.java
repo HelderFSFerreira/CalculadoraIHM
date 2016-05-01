@@ -188,6 +188,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // Verifica se uma string tem mais de um ponto
+
 
     public void checkPonto() {
         if (strAtual.isEmpty()) {
@@ -203,6 +205,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         mostrarConta();
     }
+
+    // Apaga o caratecre da string atual
 
     public void apagaCaractere() {
         if (!strAtual.isEmpty()) {
@@ -241,71 +245,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Adiciona operações
 
     public void adicionaOperacao(String operacao) {
-        switch (operacao) {
-            case "+":
-                if (strAnterior.isEmpty()) {
-                    operacao="+";
-                    this.operacao=operacao;
-                    strAnterior=strAtual;
-                    strAtual="";
-                    mostrarConta();
-                } else {
-                    if (verificarAtualVazio()) {
-                        calculaResultado();
+        if ((strAnterior.isEmpty() && (!strAtual.isEmpty())) || (!strAnterior.isEmpty() && strAtual.isEmpty())) {
+            switch (operacao) {
+                case "+":
+                    if (strAnterior.isEmpty()) {
+                        operacao = "+";
+                        this.operacao = operacao;
+                        strAnterior = strAtual;
+                        strAtual = "";
+                        mostrarConta();
+                    } else {
+                        if (verificarAtualVazio()) {
+                            calculaResultado();
+                        }
+                        operacao = "+";
+                        this.operacao = operacao;
+                        mostrarConta();
                     }
-                    operacao = "+";
-                    this.operacao = operacao;
-                    mostrarConta();
-                }
-                break;
-            case "-":
-                if (strAnterior.isEmpty()) {
-                    operacao="-";
-                    this.operacao=operacao;
-                    strAnterior=strAtual;
-                    strAtual="";
-                    mostrarConta();
-                } else {
-                    if (verificarAtualVazio()) {
-                        calculaResultado();
+                    break;
+                case "-":
+                    if (strAnterior.isEmpty()) {
+                        operacao = "-";
+                        this.operacao = operacao;
+                        strAnterior = strAtual;
+                        strAtual = "";
+                        mostrarConta();
+                    } else {
+                        if (verificarAtualVazio()) {
+                            calculaResultado();
+                        }
+                        operacao = "-";
+                        this.operacao = operacao;
+                        mostrarConta();
                     }
-                    operacao = "-";
-                    this.operacao = operacao;
-                    mostrarConta();
-                }
-                break;
-            case "*":
-                if (strAnterior.isEmpty()) {
-                    operacao="*";
-                    this.operacao=operacao;
-                    strAnterior=strAtual;
-                    strAtual="";
-                    mostrarConta();
-                } else {
-                    if (verificarAtualVazio()) {
-                        calculaResultado();
+                    break;
+                case "*":
+                    if (strAnterior.isEmpty()) {
+                        operacao = "*";
+                        this.operacao = operacao;
+                        strAnterior = strAtual;
+                        strAtual = "";
+                        mostrarConta();
+                    } else {
+                        if (verificarAtualVazio()) {
+                            calculaResultado();
+                        }
+                        operacao = "*";
+                        this.operacao = operacao;
+                        mostrarConta();
                     }
-                    operacao = "*";
-                    this.operacao = operacao;
-                    mostrarConta();
-                }
-                break;
-            case "/":
-                if (strAnterior.isEmpty()) {
-                    operacao="/";
-                    this.operacao=operacao;
-                    strAnterior=strAtual;
-                    strAtual="";
-                    mostrarConta();
-                } else {
-                    if (verificarAtualVazio()) {
-                        calculaResultado();
+                    break;
+                case "/":
+                    if (strAnterior.isEmpty()) {
+                        operacao = "/";
+                        this.operacao = operacao;
+                        strAnterior = strAtual;
+                        strAtual = "";
+                        mostrarConta();
+                    } else {
+                        if (verificarAtualVazio()) {
+                            calculaResultado();
+                        }
+                        operacao = "/";
+                        this.operacao = operacao;
+                        mostrarConta();
                     }
-                    operacao = "/";
-                    this.operacao = operacao;
-                    mostrarConta();
-                }
-                break;
+                    break;
+            }
         }
     }
 
