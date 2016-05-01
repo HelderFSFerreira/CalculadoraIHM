@@ -69,6 +69,21 @@
         </TableRow>
 
         <TableRow>
+            <Button android:id="@+id/btnPercentagem"
+                android:layout_weight="1"
+                android:text="@string/btnPercentagem" />
+            <Button android:id="@+id/btnMaisMenos"
+                android:layout_weight="1"
+                android:text="@string/btnMaisMenos"/>
+            <Button android:id="@+id/raiz"
+                android:layout_weight="1"
+                android:text="@string/raiz"/>
+            <Button android:id="@+id/btn1X"
+                android:layout_weight="1"
+                android:text="@string/UmSobreX"/>
+        </TableRow>
+
+        <TableRow>
             <Button android:id="@+id/btnLimpar"
                 android:layout_weight="2"
                 android:layout_span="2"

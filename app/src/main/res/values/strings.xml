@@ -26,4 +26,8 @@
     <string name="eText1" />
     <string name="eText2" />
     <string name="memoriaMais">M+</string>
+    <string name="btnPercentagem">%</string>
+    <string name="btnMaisMenos">+/-</string>
+    <string name="raiz">√</string>
+    <string name="UmSobreX">1/X</string>
 </resources>
