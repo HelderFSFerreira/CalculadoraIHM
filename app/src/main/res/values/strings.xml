@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalculadoraIHM</string>
+    <string name="app_name">HFCalc</string>
     <string name="Resultado" />
     <string name="mMais">M+</string>
     <string name="mMenos">M-</string>
