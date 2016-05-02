@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Adiciona operações
 
     public void adicionaOperacao(String operacao) {
-        if ((strAnterior.isEmpty() && (!strAtual.isEmpty())) || (!strAnterior.isEmpty() && strAtual.isEmpty())) {
+        if ((strAnterior.isEmpty() && (!strAtual.isEmpty())) || (!strAnterior.isEmpty() && strAtual.isEmpty()) || (!strAnterior.isEmpty()) && (!strAtual.isEmpty())) {
             switch (operacao) {
                 case "+":
                     if (strAnterior.isEmpty()) {
