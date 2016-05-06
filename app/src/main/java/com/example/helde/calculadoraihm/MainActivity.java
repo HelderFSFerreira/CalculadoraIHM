@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.raiz:
                 raiz();
                 break;
+            case R.id.btn1X:
+                inversor();
+                break;
 
 
 
@@ -171,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void raiz() {
         float aux;
         if (strAtual.isEmpty()) {
-            if (!strAnterior.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
                 aux=Float.parseFloat(strAnterior);
                 aux= (float) Math.sqrt(aux);
                 Display1.setText("\u221A" + strAnterior); // mostra o resultado que tinha com a raiz antes
@@ -219,6 +222,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mostrarConta();
         }
     }
+
+    public void inversor() {
+        float aux;
+
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty()) {
+                aux=Float.parseFloat(strAnterior);
+                aux=1/aux;
+                strAnterior=String.valueOf(aux);
+                mostrarConta();
+            }
+        } else {
+            aux=Float.parseFloat(strAtual);
+            System.out.println(strAtual);
+            aux=1/aux;
+            strAtual=String.valueOf(aux);
+            System.out.println(strAtual);
+            mostrarConta();
+        }
+    }
+
 
     public float getNumeroMemoria() {
         if (strAnterior.isEmpty()) {
