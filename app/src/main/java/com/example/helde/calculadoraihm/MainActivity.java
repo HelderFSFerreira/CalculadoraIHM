@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnMaisMenos:
                 maisMenos();
                 break;
+            case R.id.raiz:
+                raiz();
+                break;
 
 
 
@@ -165,8 +168,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void raiz() {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty()) {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.sqrt(aux);
+                Display1.setText("\u221A" + strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+
+                Display1.setText("\u221A" + strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText("\u221A" + strAtual);
+                aux= (float) Math.sqrt(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            }
+        }
+    }
+
     public void maisMenos() {
-        float aux, menos1=-1;
+        float aux;
 
         if (strAtual.isEmpty()) {
             if (!strAnterior.isEmpty()) {
