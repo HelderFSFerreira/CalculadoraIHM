@@ -85,8 +85,8 @@
 
         <TableRow>
             <Button android:id="@+id/btnLimpar"
-                android:layout_weight="2"
                 android:layout_span="2"
+                android:layout_weight="1"
                 android:text="@string/btnClean"/>
             <Button android:id="@+id/btnApagarCaractere"
                 android:layout_weight="1"
