@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int idList[] = {R.id.btnUm, R.id.btnDois, R.id.btnTres, R.id.btnQuatro, R.id.btnCinco, R.id.btnSeis, R.id.btnSete, R.id.btnOito, R.id.btnNove, R.id.btnzero,
                 R.id.btnDivisao, R.id.btnMutilicacao, R.id.btnSoma, R.id.btnSubtracao, R.id.btnIgual,
                 R.id.btnApagarCaractere, R.id.btnLimpar, R.id.btnPonto,
+                R.id.btnPercentagem,R.id.btnMaisMenos,R.id.raiz,R.id.btn1X,
                 R.id.btnMMais,R.id.btnMMenos,R.id.btnMShow,R.id.btnMClean};
 
         for (int id : idList) {
@@ -77,6 +78,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnMShow:
                 controlaMemoria("M");
+                break;
+            case R.id.btnMaisMenos:
+                maisMenos();
                 break;
 
 
@@ -158,6 +162,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
 
+        }
+    }
+
+    public void maisMenos() {
+        float aux, menos1=-1;
+
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty()) {
+                aux=Float.parseFloat(strAnterior);
+                aux=(-aux);
+                strAnterior=String.valueOf(aux);
+                mostrarConta();
+            }
+        } else {
+            aux=Float.parseFloat(strAtual);
+            System.out.println(strAtual);
+            aux=(-aux);
+            strAtual=String.valueOf(aux);
+            System.out.println(strAtual);
+            mostrarConta();
         }
     }
 
