@@ -37,6 +37,8 @@
         android:layout_weight="0.8">
 
         <TableRow>
+            <Button android:id="@id/btnPercentagem"
+                android:text="@string/btnPercentagem"/>
             <Button android:id="@id/btnMMais"
                 android:text="@string/memoriaMais"/>
             <Button android:id="@id/btnLimpar"
@@ -50,6 +52,8 @@
         </TableRow>
 
         <TableRow>
+            <Button android:id="@id/btnMaisMenos"
+                android:text="@string/btnMaisMenos"/>
             <Button android:id="@id/btnMMenos"
                     android:text="@string/mMenos"/>
             <Button android:id="@id/btnSete"
@@ -66,6 +70,8 @@
         </TableRow>
 
         <TableRow>
+            <Button android:id="@id/raiz"
+                android:text="@string/raiz"/>
             <Button android:id="@id/btnMShow"
                     android:text="@string/mShow"/>
             <Button android:id="@id/btnQuatro"
@@ -79,6 +85,8 @@
         </TableRow>
 
         <TableRow>
+            <Button android:id="@id/btn1X"
+                android:text="@string/btnMaisMenos"/>
             <Button android:id="@id/btnMClean"
                     android:text="@string/mClean"/>
             <Button android:id="@id/btnUm"
