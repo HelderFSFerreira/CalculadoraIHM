@@ -88,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn1X:
                 inversor();
                 break;
+            case R.id.btnPercentagem:
+                percentagem();
+                break;
+
 
 
 
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void controlaMemoria(String tipo) {
         switch (tipo) {
             case "C":
-                if (memoriaLimpa == false) {
+                if (!memoriaLimpa) {
                     memoriaM=0;
                     memoriaLimpa=true;
                     strAnterior="";
@@ -171,6 +175,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void percentagem() {
+        if ((!strAtual.isEmpty()) && (!strAnterior.isEmpty())) {
+            float x,y,aux;
+            x=Float.valueOf(strAnterior);
+            y=Float.valueOf(strAtual);
+
+            aux=(x*y)/100;
+
+            switch (operacao) {
+                case "+":
+                    resultado=x+aux;
+                    break;
+                case "-":
+                    resultado=x-aux;
+                    break;
+                case "*":
+                    resultado=x*aux;
+                    break;
+                case "/":
+                    resultado=x/aux;
+                    break;
+            }
+            strAnterior=String.valueOf(resultado);
+            strAtual="";
+            Display2.setText(strAnterior);
+        }
+    }
+
     public void raiz() {
         float aux;
         if (strAtual.isEmpty()) {
@@ -215,10 +247,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         } else {
             aux=Float.parseFloat(strAtual);
-            System.out.println(strAtual);
             aux=(-aux);
             strAtual=String.valueOf(aux);
-            System.out.println(strAtual);
             mostrarConta();
         }
     }
@@ -235,10 +265,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         } else {
             aux=Float.parseFloat(strAtual);
-            System.out.println(strAtual);
             aux=1/aux;
             strAtual=String.valueOf(aux);
-            System.out.println(strAtual);
             mostrarConta();
         }
     }
