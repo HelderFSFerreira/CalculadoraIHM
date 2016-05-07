@@ -32,4 +32,9 @@
     <string name="UmSobreX">1/X</string>
     <string name="btnMilhas">milhas</string>
     <string name="btnRadianos">rad</string>
+    <string name="btnSeno">sin</string>
+    <string name="btnCoseno">cos</string>
+    <string name="btnTangente">tan</string>
+    <string name="logaritmo">ln</string>
+    <string name="btnExponencial">e</string>
 </resources>

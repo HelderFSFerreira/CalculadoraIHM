@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <EditText
             android:layout_width="match_parent"
@@ -34,84 +34,136 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.8">
+        android:layout_weight="0.6"
+        android:gravity="bottom">
 
         <TableRow>
+            <Button android:id="@+id/btnSin"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="@string/btnSeno"
+                    android:onClick="btnSin"/>
             <Button android:id="@id/btnPercentagem"
-                android:text="@string/btnPercentagem"/>
+                    android:layout_weight="1"
+                    android:text="@string/btnPercentagem"/>
             <Button android:id="@id/btnMMais"
-                android:text="@string/memoriaMais"/>
+                    android:layout_weight="1"
+                    android:text="@string/memoriaMais"/>
             <Button android:id="@id/btnLimpar"
+                    android:layout_weight="1"
                     android:layout_span="2"
                     android:text="@string/btnClean"/>
             <Button android:id="@id/btnApagarCaractere"
+                    android:layout_weight="1"
                     android:text="@string/btnBack"/>
 
             <Button android:id="@id/btnDivisao"
+                    android:layout_weight="1"
                     android:text="@string/btnDivide"/>
         </TableRow>
 
         <TableRow>
+            <Button android:id="@+id/btnCos"
+                    android:layout_weight="1"
+                    android:text="@string/btnCoseno"
+                    android:textAllCaps="false"
+                    android:onClick="btnCos"/>
             <Button android:id="@id/btnMaisMenos"
-                android:text="@string/btnMaisMenos"/>
+                    android:layout_weight="1"
+                    android:text="@string/btnMaisMenos"/>
             <Button android:id="@id/btnMMenos"
+                    android:layout_weight="1"
                     android:text="@string/mMenos"/>
             <Button android:id="@id/btnSete"
+                    android:layout_weight="1"
                     android:text="@string/btn7"/>
 
             <Button android:id="@id/btnOito"
+                    android:layout_weight="1"
                     android:text="@string/btn8"/>
 
             <Button android:id="@id/btnNove"
+                    android:layout_weight="1"
                     android:text="@string/btn9"/>
 
             <Button android:id="@id/btnMutilicacao"
+                    android:layout_weight="1"
                     android:text="@string/btnMultiplicar"/>
         </TableRow>
 
         <TableRow>
+            <Button android:id="@+id/btnTan"
+                    android:layout_weight="1"
+                    android:text="@string/btnTangente"
+                    android:textAllCaps="false"
+                    android:onClick="btnTan"/>
             <Button android:id="@id/raiz"
-                android:text="@string/raiz"/>
+                    android:layout_weight="1"
+                    android:text="@string/raiz"/>
             <Button android:id="@id/btnMShow"
+                    android:layout_weight="1"
                     android:text="@string/mShow"/>
             <Button android:id="@id/btnQuatro"
+                    android:layout_weight="1"
                     android:text="@string/btn4"/>
             <Button android:id="@id/btnCinco"
+                    android:layout_weight="1"
                     android:text="@string/btn5"/>
             <Button android:id="@id/btnSeis"
+                    android:layout_weight="1"
                     android:text="@string/btn6"/>
             <Button android:id="@id/btnSubtracao"
+                    android:layout_weight="1"
                     android:text="@string/btnMenos"/>
         </TableRow>
 
         <TableRow>
+            <Button android:id="@+id/btnLn"
+                    android:layout_weight="1"
+                    android:text="@string/logaritmo"
+                    android:textAllCaps="false"/>
             <Button android:id="@id/btn1X"
-                android:text="@string/btnMaisMenos"/>
+                    android:layout_weight="1"
+                    android:text="@string/btnMaisMenos"/>
             <Button android:id="@id/btnMClean"
+                    android:layout_weight="1"
                     android:text="@string/mClean"/>
             <Button android:id="@id/btnUm"
+                    android:layout_weight="1"
                     android:text="@string/btn1"/>
             <Button android:id="@id/btnDois"
+                    android:layout_weight="1"
                     android:text="@string/btn2"/>
             <Button android:id="@id/btnTres"
+                    android:layout_weight="1"
                     android:text="@string/btn3"/>
             <Button android:id="@id/btnSoma"
+                    android:layout_weight="1"
                     android:text="@string/btnPlus"/>
         </TableRow>
         <TableRow>
+            <Button android:id="@+id/btnExponencial"
+                    android:layout_weight="1"
+                    android:text="@string/btnExponencial"
+                    android:textAllCaps="false"/>
             <Button android:id="@+id/btnRadianos"
-                android:text="@string/btnRadianos"
-                android:textAllCaps="false"
-                android:onClick="btnRadianos"/>
+                    android:layout_weight="1"
+                    android:text="@string/btnRadianos"
+                    android:textAllCaps="false"
+                    android:onClick="btnRadianos"/>
             <Button android:id="@+id/btnMilhas"
-                android:text="@string/btnMilhas"
-                android:textAllCaps="false"
-                android:onClick="btnMilhas"/>
+                    android:layout_weight="1"
+                    android:text="@string/btnMilhas"
+                    android:textAllCaps="false"
+                    android:onClick="btnMilhas"/>
             <Button android:id="@id/btnzero"
+                     android:layout_weight="1"
                     android:text="@string/btn0"/>
             <Button android:id="@id/btnPonto"
+                    android:layout_weight="1"
                     android:text="@string/btnDot"/>
             <Button android:id="@id/btnIgual"
+                    android:layout_weight="2"
                     android:text="@string/btnEquals"
                     android:layout_span="2"/>
         </TableRow>

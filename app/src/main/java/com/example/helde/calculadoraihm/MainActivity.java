@@ -516,7 +516,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (strAtual.isEmpty()) {
             if (!strAnterior.isEmpty() && operacao=="") {
                 aux=Float.parseFloat(strAnterior);
-                aux= (float) ((aux*Math.PI)/180);
+                aux= (float) Math.toRadians(aux);
                 Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
@@ -527,7 +527,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
 
                 aux=Float.parseFloat(strAnterior);
-                aux= (float) ((aux*Math.PI)/180);
+                aux= (float) Math.toRadians(aux);
                 Display1.setText(strAnterior);
                 strAnterior=String.valueOf(aux);
                 strAtual="";
@@ -535,11 +535,202 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
-                aux= (float) ((aux*Math.PI)/180);
+                aux= (float) Math.toRadians(aux);
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
             }
         }
     }
+
+    public void btnSin (View view) {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.sin(aux);
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui1"+strAnterior);
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.sin(aux);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui2"+strAnterior);
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.sin(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui3"+strAnterior);
+            }
+        }
+    }
+
+    public void btnCos (View view) {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.cos(aux);
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui1"+strAnterior);
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.cos(aux);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui2"+strAnterior);
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.cos(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui3"+strAnterior);
+            }
+        }
+    }
+
+    public void btnTan (View view) {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.tan(aux);
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui1"+strAnterior);
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.tan(aux);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui2"+strAnterior);
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.tan(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui3"+strAnterior);
+            }
+        }
+    }
+
+    public void btnLn (View view) {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.log(aux);
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui1"+strAnterior);
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.log(aux);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui2"+strAnterior);
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.log(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui3"+strAnterior);
+            }
+        }
+    }
+
+    public void btnE (View view) {
+        float aux;
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.exp(aux);
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui1"+strAnterior);
+            }
+        } else {
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.exp(aux);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui2"+strAnterior);
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) Math.toRadians(aux);
+                aux= (float) Math.exp(aux);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+                System.out.println("Entrei aqui3"+strAnterior);
+            }
+        }
+    }
+
 }
