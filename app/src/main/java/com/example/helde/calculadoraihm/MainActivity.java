@@ -479,7 +479,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public void btnMilhas(View view) {
+    public void btnMilhas(View view) { //Conversão para milhas
         float aux;
 
         if(strAtual.isEmpty()) {
@@ -494,8 +494,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             aux= (float) (aux*0.00062137);
             strAtual=String.valueOf(aux);
             mostrarConta();
-            System.out.println("estou aqui"+strAnterior);
         }
+    }
 
+    public void btnRadianos(View view) {
+        float aux;
+
+        if(strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty()) {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) ((aux*Math.PI)/180);
+                strAnterior=String.valueOf(aux);
+                mostrarConta();
+            }
+        } else {
+            aux=Float.parseFloat(strAtual);
+            aux= (float) ((aux*Math.PI)/180);
+            strAtual=String.valueOf(aux);
+            mostrarConta();
+        }
     }
 }
