@@ -99,6 +99,14 @@
                     android:text="@string/btnPlus"/>
         </TableRow>
         <TableRow>
+            <Button android:id="@+id/btnRadianos"
+                android:text="@string/btnRadianos"
+                android:textAllCaps="false"
+                android:onClick="btnRadianos"/>
+            <Button android:id="@+id/btnMilhas"
+                android:text="@string/btnMilhas"
+                android:textAllCaps="false"
+                android:onClick="btnMilhas"/>
             <Button android:id="@id/btnzero"
                     android:text="@string/btn0"/>
             <Button android:id="@id/btnPonto"

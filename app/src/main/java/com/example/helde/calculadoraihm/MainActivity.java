@@ -477,4 +477,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void mostrarConta() {
         Display1.setText(strAnterior + " " + operacao + " " + strAtual);
     }
+
+
+    public void btnMilhas(View view) {
+        float aux;
+
+        if(strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty()) {
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) (aux*0.00062137);
+                strAnterior=String.valueOf(aux);
+                mostrarConta();
+            }
+        } else {
+            aux=Float.parseFloat(strAtual);
+            aux= (float) (aux*0.00062137);
+            strAtual=String.valueOf(aux);
+            mostrarConta();
+            System.out.println("estou aqui"+strAnterior);
+        }
+
+    }
 }

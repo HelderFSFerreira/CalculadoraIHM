@@ -30,4 +30,6 @@
     <string name="btnMaisMenos">+/-</string>
     <string name="raiz">√</string>
     <string name="UmSobreX">1/X</string>
+    <string name="btnMilhas">milhas</string>
+    <string name="btnRadianos">rad</string>
 </resources>
