@@ -121,7 +121,8 @@
             <Button android:id="@+id/btnLn"
                     android:layout_weight="1"
                     android:text="@string/logaritmo"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:onClick="btnLn"/>
             <Button android:id="@id/btn1X"
                     android:layout_weight="1"
                     android:text="@string/btnMaisMenos"/>
@@ -145,7 +146,8 @@
             <Button android:id="@+id/btnExponencial"
                     android:layout_weight="1"
                     android:text="@string/btnExponencial"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:onClick="btnE"/>
             <Button android:id="@+id/btnRadianos"
                     android:layout_weight="1"
                     android:text="@string/btnRadianos"

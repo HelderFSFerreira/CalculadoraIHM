@@ -554,7 +554,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui1"+strAnterior);
             }
         } else {
             if (!strAnterior.isEmpty()) {
@@ -567,7 +566,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui2"+strAnterior);
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
@@ -576,7 +574,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui3"+strAnterior);
             }
         }
     }
@@ -592,7 +589,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui1"+strAnterior);
             }
         } else {
             if (!strAnterior.isEmpty()) {
@@ -605,7 +601,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui2"+strAnterior);
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
@@ -614,7 +609,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui3"+strAnterior);
             }
         }
     }
@@ -630,7 +624,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui1"+strAnterior);
             }
         } else {
             if (!strAnterior.isEmpty()) {
@@ -643,7 +636,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui2"+strAnterior);
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
@@ -652,7 +644,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui3"+strAnterior);
             }
         }
     }
@@ -668,7 +659,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui1"+strAnterior);
             }
         } else {
             if (!strAnterior.isEmpty()) {
@@ -681,7 +671,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui2"+strAnterior);
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
@@ -690,7 +679,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui3"+strAnterior);
             }
         }
     }
@@ -706,7 +694,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui1"+strAnterior);
             }
         } else {
             if (!strAnterior.isEmpty()) {
@@ -719,7 +706,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui2"+strAnterior);
             } else {
                 aux=Float.parseFloat(strAtual);
                 Display1.setText(strAtual);
@@ -728,7 +714,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strAnterior=String.valueOf(aux);
                 strAtual="";
                 Display2.setText(String.valueOf(aux));
-                System.out.println("Entrei aqui3"+strAnterior);
             }
         }
     }
