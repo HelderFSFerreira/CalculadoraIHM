@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
 
                 aux=Float.parseFloat(strAnterior);
-
+                aux= (float) Math.sqrt(aux);
                 Display1.setText("\u221A" + strAnterior);
                 strAnterior=String.valueOf(aux);
                 strAtual="";
@@ -481,37 +481,65 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void btnMilhas(View view) { //Conversão para milhas
         float aux;
-
-        if(strAtual.isEmpty()) {
-            if (!strAnterior.isEmpty()) {
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
                 aux=Float.parseFloat(strAnterior);
                 aux= (float) (aux*0.00062137);
-                strAnterior=String.valueOf(aux);
-                mostrarConta();
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
             }
         } else {
-            aux=Float.parseFloat(strAtual);
-            aux= (float) (aux*0.00062137);
-            strAtual=String.valueOf(aux);
-            mostrarConta();
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) (aux*0.00062137);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) (aux*0.00062137);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            }
         }
     }
 
     public void btnRadianos(View view) {
         float aux;
-
-        if(strAtual.isEmpty()) {
-            if (!strAnterior.isEmpty()) {
+        if (strAtual.isEmpty()) {
+            if (!strAnterior.isEmpty() && operacao=="") {
                 aux=Float.parseFloat(strAnterior);
                 aux= (float) ((aux*Math.PI)/180);
-                strAnterior=String.valueOf(aux);
-                mostrarConta();
+                Display1.setText(strAnterior); // mostra o resultado que tinha com a raiz antes
+                strAnterior=String.valueOf(aux); // Define o valor anterior como o resultado da raiz para se poder fazer contas sobre ele
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
             }
         } else {
-            aux=Float.parseFloat(strAtual);
-            aux= (float) ((aux*Math.PI)/180);
-            strAtual=String.valueOf(aux);
-            mostrarConta();
+            if (!strAnterior.isEmpty()) {
+                calculaResultado(); // Calcula resultado pois tem uma conta primeiro a fazer
+
+                aux=Float.parseFloat(strAnterior);
+                aux= (float) ((aux*Math.PI)/180);
+                Display1.setText(strAnterior);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            } else {
+                aux=Float.parseFloat(strAtual);
+                Display1.setText(strAtual);
+                aux= (float) ((aux*Math.PI)/180);
+                strAnterior=String.valueOf(aux);
+                strAtual="";
+                Display2.setText(String.valueOf(aux));
+            }
         }
     }
 }
