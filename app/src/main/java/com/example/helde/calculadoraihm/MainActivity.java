@@ -1,5 +1,6 @@
 package com.example.helde.calculadoraihm;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
+
         Display1 = (EditText) findViewById(R.id.eText1);
         Display2 = (EditText) findViewById(R.id.eText2);
 
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        MediaPlayer mp;
+
         switch (view.getId()) {
             case R.id.btnSoma:
                 adicionaOperacao("+");
@@ -98,6 +102,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 String numero = ((Button) view).getText().toString();
                 adicionaNumero(numero);
+                mp = MediaPlayer.create(this,R.raw.click);
+                mp.start();
                 break;
         }
         penultimobotao(view);
